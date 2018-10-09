@@ -1,0 +1,33 @@
+.new-tweet {
+    border: 1px solid lightgray;
+    background-color: gainsboro;
+    width: 400px;
+    height: 160px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 0 2em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+textarea {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+    padding: 0.2em;
+}
+
+textarea::placeholder {
+    text-align: left;
+}
+
+input {
+    float: left;
+}
+
+.new-tweet .counter {
+    float: right;
+}
