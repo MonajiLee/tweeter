@@ -25,9 +25,6 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-
     <!-- Character Counter for Tweet Compose Form -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
@@ -46,25 +43,20 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method=POST action="/tweets">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" placeholder="What are you tweet about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
 
       <!-- Tweet content here -->
-      <section>
-        <article>
-          <header> MONAJI
-              <p>@LHL2018</p>
-              <img class="avatar" src="/images/bird.png">
-          </header>
-          <div class="tweetcontent">*tweet tweet*</div>
-          <footer>1 day ago
-          </footer>
-        </article>
+      <section id="tweets-container">
       </section>
 
     </main>
+   
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  
   </body>
 </html>
