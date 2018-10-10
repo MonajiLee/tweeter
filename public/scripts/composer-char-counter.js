@@ -4,10 +4,9 @@ $(document).ready(function() {
         let countdown = $(counterElem).text(140 - this.value.length);
 
         if ($(counterElem).text() < 0) {
-            $(countdown).addClass("counter0");
+            $(countdown).addClass("zero");
         } else {
-            $(countdown).removeClass("counter0");
-
+            $(countdown).removeClass("zero");
         }
     })
 });
