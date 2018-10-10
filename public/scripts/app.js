@@ -54,11 +54,13 @@ const data = [
 
 
 // Task 3
-
 $('form').on('submit', function(event) {
     event.preventDefault();
-    $('form').find("textarea[name=text]").val();
-})
+    let tweetInput = $(event.target).serialize();
+    $.ajax("/tweets/", {method: 'POST', data: tweetInput}).then(() => {
+        console.log("This is working");
+    });
+});
 
 // Task 2 ----- renders tweets dynamically in relation to Task 1 -----
 function renderTweets(tweetArr) {
