@@ -31,3 +31,8 @@ input {
 .new-tweet .counter {
     float: right;
 }
+
+.new-tweet .counter.zero{
+    float: right;
+    color: red;
+}
