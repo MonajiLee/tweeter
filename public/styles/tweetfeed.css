@@ -1,0 +1,64 @@
+article {
+    position: relative;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 150px;
+    width: 400px;
+    line-height: 1em;
+    margin: 2em auto;
+}
+
+article:hover {
+    opacity: 0.5;
+}
+
+header {
+    height: 50px;
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: 700;
+    font-size: 18pt;
+    padding-left: 0.2em;
+    border-bottom: 1px solid lightgray;
+    background-color: lightgray;
+}
+
+p {
+    padding-right: 0.5em;
+    font-size: 9pt;
+    font-weight: 100;
+    line-height: 1.2em;
+    float: right;
+}
+
+.avatar {
+    border: 1px solid #00a087;
+    border-radius: 5px;
+    background-color: #00a087;
+    margin: 0.2em 0.2em 0 0;
+    padding: 0.1em;
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+div {
+    max-height: 95px;
+    max-width: 300px;
+    text-align: left;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    background-color: white;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    line-height: 2.1em;
+    text-align: left;
+    font-size: 8pt;
+    padding-left: 0.5em;
+    border-top: 1px solid lightgray;
+}
