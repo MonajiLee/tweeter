@@ -1,17 +1,16 @@
-// Task 4 --- create AJAX GET request from the server
+
+// --- create AJAX GET request from the server --- //
 function loadTweets() {
     $.ajax({
         url:'/tweets',
         method:'GET',
-        success: function(result){
-            renderTweets(result);
+        success: function(result) {
+            renderTweets(result.reverse());
         }
     });
 }
 
-loadTweets();
-
-// Task 3 --- creates AJAX POST request to the server ---
+// --- creates AJAX POST request to the server --- //
 $('form').on('submit', function(event) {
     event.preventDefault();
     let tweetInput = $(event.target).serialize();
@@ -26,21 +25,32 @@ $('form').on('submit', function(event) {
     } else {
         $.ajax("/tweets/", {
             method: 'POST', 
-            data: tweetInput 
+            data: tweetInput,
+            success: function(result) {
+                loadTweets(result) }
         }).then(() => {
             $("textarea[name=text]").val("");
+            $(".counter").text(140);
         })
     }
 });
 
-// Task 2 ----- renders tweets dynamically in relation to Task 1 -----
+// --- 'Compose' button animation --- //
+$('button').on('click', function(event) {
+    $('.new-tweet').slideToggle();
+    $('textarea').focus().select();
+});
+
+// --- new tweet shows up without refreshing the page --- //
+// --- renders tweets dynamically in relation to Task 1 --- //
 function renderTweets(tweetArr) {
-    $.each(tweetArr, function(index, value) {
-        $(createTweetElement(value)).appendTo("#tweets-container");
-    })
+    $('#tweets-container').empty();
+    tweetArr.forEach(function(element){
+        $(createTweetElement(element)).appendTo("#tweets-container");
+    });
 }
 
-// Task 1 ----- creates tweet and returns HTML structure ---------
+// --- creates tweet and returns HTML structure --- //
 function createTweetElement(tweetObj) {
     let $tweet = $("<article>")
         .addClass("tweet");
@@ -54,7 +64,7 @@ function createTweetElement(tweetObj) {
         .append($profilePicture)
         .append($userhandle);
     let $message = $("<div>")
-        .append(tweetObj.content.text);
+        .text(tweetObj.content.text);
     let $date = $("<footer>")
         .append(tweetObj.created_at);
 
@@ -63,3 +73,5 @@ function createTweetElement(tweetObj) {
         .append($message)
         .append($date);
 }
+
+loadTweets();
