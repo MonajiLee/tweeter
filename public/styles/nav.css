@@ -20,3 +20,14 @@
     float: left;
     padding-right: 5px
 }
+
+button {
+    position: relative;
+    height: 40px;
+    width: 80px;
+    border-radius: 2px;
+    float: right;
+    margin: 20px;
+    color: #00a087;
+    background-color: #e8fdff
+}
