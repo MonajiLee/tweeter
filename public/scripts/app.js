@@ -15,14 +15,17 @@ $('form').on('submit', function(event) {
     event.preventDefault();
     let tweetInput = $(event.target).serialize();
     let tweetContent = $("textarea[name=text]").val();
+    $('label').slideDown();
 
     if (tweetContent.length === 0) {
-        alert("Oops! We couldn't find anything to tweet.");
+        $('label').text("Sorry, we couldn't find anything to tweet.");
+        
         return;
     } else if (tweetContent.length > 140) {
-        alert("Sorry, your tweet can only be 140 characters max.");
+        $('label').text("Sorry, your tweet can only be 140 characters max.");
         return;
     } else {
+        $('label').slideUp();
         $.ajax("/tweets/", {
             method: 'POST', 
             data: tweetInput,
