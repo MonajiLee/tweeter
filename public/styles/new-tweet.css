@@ -2,7 +2,7 @@
     border: 1px solid lightgray;
     background-color: gainsboro;
     width: 400px;
-    height: 160px;
+    height: 175px;
     margin: auto;
     border-radius: 5px;
     padding: 0 2em;
@@ -32,7 +32,12 @@ input {
     float: right;
 }
 
-.new-tweet .counter.zero{
+.new-tweet .counter.zero {
     float: right;
-    color: red;
+    color: #F66060;
+}
+
+label {
+    color: #F66060;
+    font-weight: 600;
 }
