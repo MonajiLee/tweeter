@@ -1,8 +1,5 @@
-$(() => {
-
-
 // Task 4 --- create AJAX GET request from the server
-function loadTweets(tweetDatabase) {
+function loadTweets() {
     $.ajax({
         url:'/tweets',
         method:'GET',
@@ -12,17 +9,28 @@ function loadTweets(tweetDatabase) {
     });
 }
 
-
+loadTweets();
 
 // Task 3 --- creates AJAX POST request to the server ---
 $('form').on('submit', function(event) {
     event.preventDefault();
     let tweetInput = $(event.target).serialize();
-    $.ajax("/tweets/", {
-        method: 'POST', 
-        data: tweetInput 
-    }).then(() => {
-    });
+    let tweetContent = $("textarea[name=text]").val();
+
+    if (tweetContent.length === 0) {
+        alert("Oops! We couldn't find anything to tweet.");
+        return;
+    } else if (tweetContent.length > 140) {
+        alert("Sorry, your tweet can only be 140 characters max.");
+        return;
+    } else {
+        $.ajax("/tweets/", {
+            method: 'POST', 
+            data: tweetInput 
+        }).then(() => {
+            $("textarea[name=text]").val("");
+        })
+    }
 });
 
 // Task 2 ----- renders tweets dynamically in relation to Task 1 -----
@@ -55,6 +63,3 @@ function createTweetElement(tweetObj) {
         .append($message)
         .append($date);
 }
-
-loadTweets();
-});
