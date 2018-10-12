@@ -18,11 +18,10 @@ $('form').on('submit', function(event) {
     $('label').slideDown();
 
     if (tweetContent.length === 0) {
-        $('label').text("Sorry, we couldn't find anything to tweet.");
-        
+        $('label').text("Please fill in the text box with something to squeek.");
         return;
     } else if (tweetContent.length > 140) {
-        $('label').text("Sorry, your tweet can only be 140 characters max.");
+        $('label').text("Sorry, your squeek can only be 140 characters max.");
         return;
     } else {
         $('label').slideUp();
@@ -69,12 +68,17 @@ function createTweetElement(tweetObj) {
     let $message = $("<div>")
         .text(tweetObj.content.text);
     let $date = $("<footer>")
-        .append(tweetObj.created_at);
+        .append(moment(tweetObj.created_at).fromNow());
+    let $icons = $("<footer>")
+        .append("<i class='far fa-flag'></i>")
+        .append("<i class='fas fa-retweet'></i>")
+        .append("<i class='far fa-heart'></i>");
 
     return $tweet
         .append($username)
         .append($message)
-        .append($date);
+        .append($date)
+        .append($icons);
 }
 
 loadTweets();
