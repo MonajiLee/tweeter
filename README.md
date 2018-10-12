@@ -1,8 +1,13 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter ("Squeeker") is a simple, single-page Twitter clone built with front-end skills (HTML, CSS, JS, jQuery, AJAX) and back-end (Node, Express, MongoDB) skills.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+As a part of the web development curriculum at Lighthouse Labs (YVR), this was an individual evaluated project built over five days.
+
+
+# Final Product
+!["Squeeker" Main Page](https://github.com/MonajiLee/tweeter/blob/master/public/images/main-page.png)
+
 
 ## Getting Started
 
@@ -15,3 +20,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+- MD5
+- mongoDB
