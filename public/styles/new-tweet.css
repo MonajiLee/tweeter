@@ -1,16 +1,18 @@
 .new-tweet {
     border: 1px solid lightgray;
-    background-color: gainsboro;
+    background-color: lemonchiffon;
     width: 400px;
-    height: 175px;
+    height: 155px;
     margin: auto;
     border-radius: 5px;
     padding: 0 2em;
 }
 
 h2 {
-    border-bottom: 1px solid black;
+    color: darkblue;
+    border-bottom: 1px solid darkblue;
     text-align: left;
+    margin: 10px;
 }
 
 textarea {
@@ -30,6 +32,7 @@ input {
 
 .new-tweet .counter {
     float: right;
+    color: darkblue;
 }
 
 .new-tweet .counter.zero {
