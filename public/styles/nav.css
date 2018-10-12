@@ -2,32 +2,47 @@
     position: fixed;
     height: 80px;
     width: 100%;
-    background-color: #00a087;
+    background: repeating-linear-gradient(
+        -45deg,
+        darkblue,
+        darkblue 50px,
+        white 50px,
+        white 90px
+        );
     color: #e8fdff;
     padding: 0 2em;
+    z-index: 9999;
 }
 
 #nav-bar .header {
     float: left;
-    line-height: 2.5;
-    font-size: 200%;
-    padding-left: 5px
+    font-weight: 900;
+    color: #FFFF33;
+    text-shadow:
+        -1px -1px 0 darkblue,
+        1px -1px 0 darkblue,
+        -1px 1px 0 darkblue,
+        1px 1px 0 darkblue;
+    line-height: 1.5;
+    font-size: 300%;
+    padding-left: 5px;
  }
 
 #nav-bar .logo {
     height: 80px;
-    width: 80px;
+    width: 90px;
     float: left;
     padding-right: 5px
 }
 
 button {
     position: relative;
-    height: 40px;
-    width: 80px;
-    border-radius: 2px;
+    height: 50px;
+    width: 90px;
+    border-radius: 5px;
     float: right;
-    margin: 20px;
-    color: #00a087;
-    background-color: #e8fdff
+    margin: 15px;
+    color: darkblue;
+    font-weight: 700;
+    background-color: lemonchiffon;
 }
