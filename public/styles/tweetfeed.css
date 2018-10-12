@@ -1,6 +1,6 @@
 article {
     position: relative;
-    border: 1px solid lightgray;
+    border: 1px solid lightgrey;
     border-radius: 5px;
     height: 150px;
     width: 400px;
@@ -12,6 +12,11 @@ article:hover {
     opacity: 0.5;
 }
 
+
+article:hover i {
+    visibility: visible;
+}
+
 header {
     height: 50px;
     line-height: 1.5em;
@@ -19,11 +24,13 @@ header {
     font-weight: 700;
     font-size: 18pt;
     padding-left: 0.2em;
-    border-bottom: 1px solid lightgray;
-    background-color: lightgray;
+    border-bottom: 1px solid lightgrey;
+    color: navy;
+    background-color: lemonchiffon;
 }
 
 p {
+    color: navy;
     padding-right: 0.5em;
     font-size: 9pt;
     font-weight: 100;
@@ -32,9 +39,9 @@ p {
 }
 
 .avatar {
-    border: 1px solid #00a087;
+    border: 1px solid darkblue;
     border-radius: 5px;
-    background-color: #00a087;
+    background-color: darkblue;
     margin: 0.2em 0.2em 0 0;
     padding: 0.1em;
     float: left;
@@ -47,8 +54,10 @@ div {
     max-width: 300px;
     text-align: left;
     padding-top: 0.5em;
+    
     padding-left: 0.5em;
     background-color: white;
+    word-wrap: break-word;
 }
 
 footer {
@@ -60,5 +69,12 @@ footer {
     text-align: left;
     font-size: 8pt;
     padding-left: 0.5em;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid lightgrey;
+}
+
+i {
+    visibility: hidden;
+    font-size: 1.3em;
+    padding: 0.4em;
+    float: right;
 }
