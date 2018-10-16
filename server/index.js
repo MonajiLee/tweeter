@@ -23,7 +23,7 @@ MongoClient.connect(url, (err, db) => {
   console.log(`Connected to mongodb: ${url}`);
   
   const DataHelpers = require("./lib/data-helpers.js")(db);
-  
+
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
   
   app.use("/tweets", tweetsRoutes);
